@@ -5,15 +5,17 @@ public class Course implements Serializable{
     private String subject;
     private String teacher;
     private double grade;
+    private boolean current;
 
     //constructors
     public Course(String subject, String teacher){
         this.subject=subject;
         this.teacher=teacher;
     }
-    public Course(String subject, String teacher, Double grade){
+    public Course(String subject, String teacher, boolean current, Double grade){
         this.subject=subject;
         this.teacher=teacher;
+        this.current=current;
         this.grade=grade;
     }
 
@@ -27,21 +29,27 @@ public class Course implements Serializable{
     public double getGrade(){
         return grade;
     }
+    public boolean getCurrent(){
+        return current;
+    }
 
     //setter
     public void setSubject(String subject){
         this.subject=subject;
     }
-    public void getTeacher(String teacher){
+    public void setTeacher(String teacher){
         this.teacher=teacher;
     }
-    public void getGrade(double grade){
+    public void setGrade(double grade){
         this.grade=grade;
+    }
+    public void setCurrent(boolean current){
+        this.current=current;
     }
 
     //toString: *subject* by *teacher* Grade: *grade*
     public String toString(){
-        if gradeset{
+        if (grade > 0){
             return subject+" by "+teacher+" Grade: "+grade;
         }
         else{
