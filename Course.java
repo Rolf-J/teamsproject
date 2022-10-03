@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Course implements Serializable{
+public class Course implements Serializable, Cloneable{
     //instance variables
     private String subject;
     private String teacher;
@@ -45,6 +45,13 @@ public class Course implements Serializable{
     }
     public void setCurrent(boolean current){
         this.current=current;
+    }
+
+    //cloneable
+    public class Course Clone(){
+        try{
+            return (Course) super.clone();
+        }
     }
 
     //toString: *subject* by *teacher* Grade: *grade*
