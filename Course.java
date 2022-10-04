@@ -48,7 +48,7 @@ public class Course implements Serializable, Cloneable{
     }
 
     //cloneable
-    public class Course clone(){
+    public Course clone(){
         try{
             return (Course) super.clone();
         }
