@@ -39,6 +39,9 @@ public class Student implements Serializable {
     }
 
     //removeCourse
+    public void removeCourse(Course c){
+        courses.remove (c);
+    }
 
     //calcGPA
     public double calculateGPA(){
@@ -72,6 +75,8 @@ public class Student implements Serializable {
     //getBestClass
 
     //toString
-
+    public String toString(){
+        return "sname\n+level\n+gpaPoints";
+    }
 
 }
