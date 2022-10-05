@@ -39,7 +39,40 @@ public class TEAMS{
         int ans = 0;
 
         while(ans != -1){
-            System.out.println("1. ");
+            System.out.println("1.Add Student\n2.Add Teacher\n3.Add Course\n4.Edit Student\n5.List Student\n6.List Courses\n7.Search for Student\n0.Exit");
+
+            if(ans = 1){
+                System.out.println("Enter student name: ");
+                
+            }
+            
+            if(ans = 2){
+
+            }
+
+            if(ans = 3){
+                
+            }
+
+            if(ans = 4){
+                
+            }
+
+            if(ans = 5){
+
+            }
+
+            if(ans = 6){
+                
+            }
+
+            if(ans = 7){
+                
+            }
+
+            if(ans = 0){
+
+            }
         }
         
 
