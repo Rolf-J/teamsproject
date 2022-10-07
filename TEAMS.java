@@ -38,39 +38,59 @@ public class TEAMS{
         //############## MAIN MENU STARTS HERE ##############
         int ans = 0;
 
-        while(ans != -1){
+        while(ans != 0){
             System.out.println("1.Add Student\n2.Add Teacher\n3.Add Course\n4.Edit Student\n5.List Student\n6.List Courses\n7.Search for Student\n0.Exit");
 
-            if(ans = 1){
+            if(ans == 1){ //add student
                 System.out.println("Enter student name: ");
-                
+                String sname = sc.nextLine();
+                System.out.println("Enter grade level");
+                int level = sc.nextInt();
+                Student s = new Student(sname,level);
+                students.add(s);
             }
             
-            if(ans = 2){
+            if(ans == 2){ //add teacher
+                System.out.println("Enter teacher name: ");
+                String tname = sc.nextLine();
+                System.out.println("Enter years of experience: ");
+                int experience = sc.nextInt();
+                Teacher t = new Teacher(tname,experience);
+                teachers.add(t);
+            }
+
+            if(ans == 3){ //add course
+                System.out.println("Enter subject: ");
+                String subject = sc.nextLine();
+                System.out.println("Pick a teacher: ");
+                listTeachers();                                 //DEFINE****
+                String teacher = sc.nextLine(index);            //HOW TO CHOOSE A TEACHER FROM ARRAY LIST
+                Course c = new Course(subject, teacher);
+                courses.add(c);
+            }
+
+            if(ans == 4){ // edit student
+               //add course to schedule
+               if(ans == __){
+                System.out.println("Pick a class:")
+                listCourses();
+               }
+            }
+
+            if(ans == 5){ // list courses
+                System.out.println(courses);                        //DEFINE***
+            }
+
+            if(ans == 6){ //list Students
+                listStudents();                                      //DEFINE****
+            }
+
+            if(ans == 7){ //search for student
+                System.out.println(students);
 
             }
 
-            if(ans = 3){
-                
-            }
-
-            if(ans = 4){
-                
-            }
-
-            if(ans = 5){
-
-            }
-
-            if(ans = 6){
-                
-            }
-
-            if(ans = 7){
-                
-            }
-
-            if(ans = 0){
+            if(ans == 0){ //Exit
 
             }
         }
