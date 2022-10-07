@@ -95,4 +95,4 @@ public class Student implements Serializable {
             return  "Name:"+sname+" GradeLevel: "+level+" GPA: "+calculateGPA() +"Best Class: "+getBestClass();
     }
 
-}
+} 
