@@ -35,10 +35,14 @@ public class TEAMS {
 
 
         //############## MAIN MENU STARTS HERE ##############
-        int ans = 0;
+        int ans = -1;
 
         while(ans != 0){
-            System.out.println("1.Add Student\n2.Add Teacher\n3.Add Course\n4.Edit Student\n5.List Student\n6.List Courses\n7.Search for Student\n0.Exit");
+            System.out.println("1.Add Student\n2.Add Teacher\n3.Add Course\n4.Edit Student\n5.List Courses\n6.List Student\n7.Search for Student\n0.Exit");
+            System.out.println();
+            System.out.println("Choice");
+            ans =sc.nextInt();
+            sc.nextLine();
 
             if(ans == 1){ //add student
                 System.out.println("Enter student name: ");
@@ -115,7 +119,7 @@ public class TEAMS {
                         c.setCurrent(current);
                         s.addCourse(c);
                     }
-                    if(ans == 4){
+                    if(choice2 == 4){
                         System.out.println("Pick a Class: ");
                         ArrayList<Course> courses = s.getCourses();
                         for(int i = 0; i<courses.size(); i++){
@@ -162,7 +166,7 @@ public class TEAMS {
 
                     saveData();
                     
-                    }catch(Exception e){}
+                    }catch(Exception e){System.out.println("HERE ERROR!");}
             }
         }
     }
