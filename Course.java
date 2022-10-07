@@ -3,16 +3,16 @@ import java.io.Serializable;
 public class Course implements Serializable, Cloneable{
     //instance variables
     private String subject;
-    private String teacher;
+    private Teacher teacher;
     private double grade;
     private boolean current;
 
     //constructors
-    public Course(String subject, String teacher){
+    public Course(String subject, Teacher teacher){
         this.subject=subject;
         this.teacher=teacher;
     }
-    public Course(String subject, String teacher, boolean current, Double grade){
+    public Course(String subject, Teacher teacher, boolean current, Double grade){
         this.subject=subject;
         this.teacher=teacher;
         this.current=current;
@@ -23,7 +23,7 @@ public class Course implements Serializable, Cloneable{
     public String getSubject(){
         return subject;
     }
-    public String getTeacher(){
+    public Teacher getTeacher(){
         return teacher;
     }
     public double getGrade(){
@@ -37,7 +37,7 @@ public class Course implements Serializable, Cloneable{
     public void setSubject(String subject){
         this.subject=subject;
     }
-    public void setTeacher(String teacher){
+    public void setTeacher(Teacher teacher){
         this.teacher=teacher;
     }
     public void setGrade(double grade){

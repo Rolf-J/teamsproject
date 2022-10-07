@@ -49,8 +49,6 @@ public class Student implements Serializable {
 
 
         for(int index =0 ; index < courses.size(); index++){
-            System.out.println(courses.get(index));
-
             Course  c = courses.get(index);
             double grade = c.getGrade();
             if(grade >= 90 ){
@@ -72,16 +70,28 @@ public class Student implements Serializable {
           return (double) gpaPoints;  
     }
 
-    //getBestClass                                                      ***** HELP *****
-    public String getBestClass(){
-        if (c.getGrade()>a.getGrade()){
-            return c.course;
+    //getBestClass                                                      
+    public Course getBestClass(){
+        if(courses.size() == 0 ){
+            return null;
         }
+
+
+        Course  best  = courses.get(0);
+
+        for(int index =0 ; index < courses.size(); index++){
+            Course  c = courses.get(index);
+            if (c.getGrade()>best.getGrade()){
+                best= c;
+            }
+        }
+
+        return best;
     }
 
     //toString
     public String toString(){
-        return "sname\n+level\n+gpaPoints";
+        return "Name:"+sname+" GradeLevel: "+level+" GPA: "+calculateGPA();
     }
 
 }
