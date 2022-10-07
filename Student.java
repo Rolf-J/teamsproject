@@ -72,7 +72,12 @@ public class Student implements Serializable {
           return (double) gpaPoints;  
     }
 
-    //getBestClass
+    //getBestClass                                                      ***** HELP *****
+    public String getBestClass(){
+        if (c.getGrade()>a.getGrade()){
+            return c.course;
+        }
+    }
 
     //toString
     public String toString(){

@@ -27,4 +27,9 @@ public class Teacher implements Serializable {
     public void setExperience (int experience){
         this.experience = experience;
     }
+
+    //to string
+    public String toString(){
+        return tname;
+    }
 }
